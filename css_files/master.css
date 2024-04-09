@@ -11,7 +11,7 @@ a {
   text-decoration: none;
 }
 .page {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
 }
 /* dashboard */
@@ -404,7 +404,7 @@ a {
 /* start doctor content */
 .content .doctors-list {
   width: 100%;
-  min-height: 520px;
+  height: 600px;
   padding: 0 15px;
   overflow-y: auto;
   overflow-x: auto;
