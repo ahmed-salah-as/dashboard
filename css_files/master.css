@@ -344,6 +344,7 @@ a {
 .content .illness-list {
   width: 100%;
   min-height: 300px;
+  max-height: 500px;
   padding: 0 10px;
   overflow-y: auto;
   overflow-x: auto;
