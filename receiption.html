@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css_files/master.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css_files/all.min.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <title>Admin_Dashboard</title>
+</head>
+<body>
+    <div class="page receiption">
+        <div class="dashboard ">
+            <div class="title ">
+                <img class="logo" src="images/download__15__14-removebg-preview.png" alt="">
+                <h2>الحياة</h2>
+                <i class="fa-solid fa-bars toggle"></i>
+            </div>
+            <ul class="links ">
+                <li class="">
+                    <a href="index.html">
+                        <i class="fa-solid fa-cubes fa-fw"></i>
+                        <span>الصفحة الرئيسية</span>
+                    </a>
+                </li>
+                <li class="num num1">
+                    <a class="listted" href="doctors.html">
+                        <i class="fa-solid fa-user-nurse fa-fw"></i>
+                        <span >
+                            الأطباء 
+                        </span>
+                        <i class="fa-solid fa-angle-right tog"></i>
+                    </a>
+                    <div class="list one">
+                        <a href="doctors.html">الأطباء</a>
+                        <a href="add-doctors.html">إضافة طبيب</a>
+                    </div>
+                </li>
+                <li class="num num2">
+                    <a class="listted" href="departments.html">
+                        <i class="fa-solid fa-people-group fa-fw"></i>
+                        <span> 
+                            الأقسام 
+                        </span>
+                        <i class="fa-solid fa-angle-right tog"></i>
+                    </a>
+                    <div class="list two">
+                        <a href="departments.html">الأقسام</a>
+                        <a href="add-department.html">إضافة قسم</a>
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="receiption.html">
+                        <i class="fa-solid fa-people-arrows fa-fw"></i> 
+                        <span >  الإستقبال</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="lab.html">
+                        <i class="fa-solid fa-flask-vial fa-fw"></i>
+                        <span> المعمل</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pharmacy.html">
+                        <i class="fa-solid fa-hand-holding-medical fa-fw"></i>
+                        <span> الصيدلية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="articles.html">
+                        <i class="fa-solid fa-file-signature fa-fw"></i>
+                        <span> التقارير</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="coments.html">
+                        <i class="fa-regular fa-comments fa-fw"></i>
+                        <span> التعليقات</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="log-out">
+                <a href="">
+                    <i class="fa-solid fa-arrow-right-from-bracket fa-fw"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                <div class="text">
+                    <p>صباح الخير د.أحمد طارق</p>
+                </div>
+                <div class="search">
+                    <input type="search" name="" id="" placeholder="البحث عن اسماء المرضى">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <img src="images/avatar.png" alt="" class="avatar">
+            </div>
+            <div class="income-celander">
+                <div class="hospital-income">
+                    <div class="income">
+                        <div class="title">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <h3>دخل اليوم</h3>
+                        </div>
+                        <div class="money">
+                            <p>10,577</p>
+                            <p>+15,3 %</p>
+                        </div>
+                        <div class="explaination">
+                            <p>بيانات دخل اليوم وعدد المرضي ومعدل إرتفاع وإنخفاض عن الشهر السابق</p>
+                        </div>
+                        <div class="progress-stat" style="gap: 25px;">
+                            <span class="day-num">
+                                اليوم
+                                <span style="margin-right: 5px;">1599</span>
+                            </span>
+                            <div class="progress">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="month-income">
+                        <form action="" method="post">
+                            <input type="button" name="income" class="income-button" value="دخل الشهر">
+                        </form>
+                    </div>
+                </div>
+                <!-- celander -->
+                <div class="celander_div">
+                    <div class="calendar">
+                        <header>
+                            <h3></h3>
+                            <nav>
+                            <button id="prev"></button>
+                            <button id="next"></button>
+                            </nav>
+                        </header>
+                        <section>
+                            <ul class="days">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                            </ul>
+                            <ul class="dates"></ul>
+                        </section>
+                    </div>
+                </div>
+                <!-- end celander -->
+            </div>
+            <div class="statistics-receiption">
+                <div class="text">
+                    <h2>الإستقبال</h2>
+                    <div class="index">
+                        <p>
+                            <h5>الدخل</h5>
+                            <span class="one"><p></p></span>
+                        </p>
+                        <p>
+                            <h5>المرضي</h5>
+                            <span class="two"><p></p></span>
+                        </p>
+                    </div>
+                    <img src="images/download__15_-removebg-preview.png" alt="" style="width: 100px;">
+                </div>
+                <div class="main-statistics">
+                    <ul class="x-axis">
+                        <li>10k</li>
+                        <li>1k</li>
+                        <li>500</li>
+                        <li>300</li>
+                        <li>100</li>
+                        <li>50</li>
+                    </ul>
+                    <div class="column-statistics">
+                        <div class="columns fri">
+                            <div class="column-one"></div>
+                            <div class="column-two"></div>
+                        </div>
+                        <div class="columns sat">
+                            <div class="column-one"></div>
+                            <div class="column-two"></div>
+                        </div>
+                        <div class="columns sun">
+                            <div class="column-one"></div>
+                            <div class="column-two"></div>
+                        </div>
+                        <div class="columns mon">
+                            <div class="column-one"></div>
+                            <div class="column-two"></div>
+                        </div>
+                        <div class="columns tus">
+                            <div class="column-one"></div>
+                            <div class="column-two"></div>
+                        </div>
+                        <div class="columns wed">
+                            <div class="column-one"></div>
+                            <div class="column-two"></div>
+                        </div>
+                        <div class="columns thu">
+                            <div class="column-one"></div>
+                            <div class="column-two"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-hide">
+                <i class="fa-solid fa-x close"></i>
+                <div class="cal">
+                    <div class="calculating-income">
+                        <div class="income-date">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <span>
+                                دخل شهر 2024.7   
+                            </span>
+                        </div>
+                        <p>90,000 k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </div>
+</body>
+</html>
