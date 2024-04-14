@@ -47,10 +47,13 @@ toggleButton.addEventListener('click', () => {
 
 if (doctorsListOne.classList.contains("active")) {
   firstList.style.display = "block";
+  tog[0].classList.replace("fa-angle-right", "fa-angle-down");
   // this.style.backGroundColor = "none";
 };
 if (doctorsListTwo.classList.contains("active")) {
   secondList.style.display = "block";
+  tog[1].classList.replace("fa-angle-right", "fa-angle-down");
+
 }
 incomeButton.onclick = function () {
   showHide.style.display = "block";

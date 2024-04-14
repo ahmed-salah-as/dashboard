@@ -85,12 +85,12 @@
                     </a>
                 </li>
             </ul>
-            <div class="log-out">
-                <a href="">
+            <form method="post" class="log-out">
+                <button type="submit" name="logout">
                     <i class="fa-solid fa-arrow-right-from-bracket fa-fw"></i>
                     <span>تسجيل الخروج</span>
-                </a>
-            </div>
+                </button>
+            </form >
         </div>
         <div class="content">
             <div class="header">
@@ -98,8 +98,11 @@
                     <p>صباح الخير د.أحمد طارق</p>
                 </div>
                 <div class="search">
-                    <input type="search" name="" id="" placeholder="البحث عن اسماء المرضى">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <form action="" method="post">
+                        <input type="search" name="" id="" placeholder="البحث عن اسماء المرضى">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="s_b" type="submit" value="بحث">
+                    </form>
                 </div>
                 <img src="images/avatar.png" alt="" class="avatar">
             </div>
@@ -164,7 +167,10 @@
                                 قائمة المرضي
                             </td>
                             <td id="search" colspan="3">
-                                <input type="search" name="" id="" placeholder="البحث عن اسماء المرضي">
+                                <form action="" method="post">
+                                    <input type="search" name="" id="" placeholder="البحث عن اسماء المرضي">
+                                    <input class="b-s" type="submit" value="بحث">
+                                </form>
                             </td>
                             <td id="logo" colspan="2">
                                 <img src="images/download__15_-removebg-preview.png" alt="">
@@ -206,7 +212,7 @@
                                 </form>
                             </td>
                         </tr>
-                        <tr class="bor">
+                        <!-- <tr class="bor">
                             <td>احمد طارق</td>
                             <td>#5564</td>
                             <td> 25.12.2023</td>
@@ -270,7 +276,7 @@
                                     <button type="submit" name="menu"><i class="fa-solid fa-ellipsis"></i></button>
                                 </form>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>

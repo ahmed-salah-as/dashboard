@@ -42,7 +42,7 @@
                     </div>
                 </li>
                 <li class="num num2 active">
-                    <a class="listted active" href="departments.html">
+                    <a class="listted " href="departments.html">
                         <i class="fa-solid fa-people-group fa-fw"></i>
                         <span> 
                             الأقسام 
@@ -85,12 +85,12 @@
                     </a>
                 </li>
             </ul>
-            <div class="log-out">
-                <a href="">
+            <form method="post" class="log-out">
+                <button type="submit" name="logout">
                     <i class="fa-solid fa-arrow-right-from-bracket fa-fw"></i>
                     <span>تسجيل الخروج</span>
-                </a>
-            </div>
+                </button>
+            </form >
         </div>
         <div class="content">
             <div class="header">
@@ -98,8 +98,11 @@
                     <p>صباح الخير د.أحمد طارق</p>
                 </div>
                 <div class="search">
-                    <input type="search" name="" id="" placeholder="البحث عن اسماء المرضى">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <form action="" method="post">
+                        <input type="search" name="" id="" placeholder="البحث عن اسماء المرضى">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="s_b" type="submit" value="بحث">
+                    </form>
                 </div>
                 <img src="images/avatar.png" alt="" class="avatar">
             </div>

@@ -11,23 +11,15 @@ a {
   text-decoration: none;
 }
 .page {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
+  overflow: hidden;
 }
 /* dashboard */
 .dashboard {
   position: relative;
   width: 250px;
-  background-image: linear-gradient(
-    110deg,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #332fec,
-    #1712e2,
-    #1712e2
-  );
+  background-image: linear-gradient(110deg,#180d8d,#3532b4);
   color: white;
   padding: 10px;
   transition: 0.5s;
@@ -94,6 +86,7 @@ a {
   transition: 0.3s;
   background-color: transparent !important;
 }
+
 .dashboard .links .num .list {
   display: none;
   transition: 0.3s;
@@ -105,31 +98,41 @@ a {
   padding: 0 10px;
   border-radius: 20px;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .dashboard .links .num1:hover .one {
     display: block;
   }
   .dashboard .links .num2:hover .two {
     display: block;
   }
-}
+} */
 .dashboard .log-out {
-  padding: 5px;
   width: 80%;
   position: absolute;
   bottom: 5px;
-  border-radius: 10px;
 }
-.dashboard .log-out:hover,
 .dashboard .links li:hover,
 .dashboard .links .active {
   background-color: #ffffff6e;
 }
-.dashboard .log-out a span,
-.dashboard .log-out a i {
+.dashboard .log-out button span,
+.dashboard .log-out button i {
   color: white;
 }
-.dashboard .log-out a span {
+.dashboard .log-out button {
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+}
+.dashboard .log-out button:hover {
+  background-color: #eb51518a;
+}
+.dashboard .log-out button span {
   margin-right: 10px;
   font-size: 16px;
   font-weight: bold;
@@ -185,7 +188,11 @@ a {
   width: 360px;
   position: relative;
 }
-.content .header .search input {
+.content .header .search form {
+  display: flex;
+  gap: 10px;
+}
+.content .header .search input[type="search"] {
   width: 100%;
   padding: 5px 40px 5px 5px;
   border-radius: 10px;
@@ -198,7 +205,18 @@ a {
   right: 15px;
   top: 10px;
 }
-.content .header .search input:focus {
+.content .header .search input[type="submit"],
+.b-s {
+  background-image: linear-gradient(110deg,#180d8d,#3532b4);
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.content .header .search input[type="search"]:focus {
   outline: none;
 }
 .content .header .avatar {
@@ -244,16 +262,7 @@ a {
   grid-gap: 10px;
 }
 .content .details .main-details .m-d {
-  background-image: linear-gradient(
-    110deg,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #332fec,
-    #1712e2,
-    #1712e2
-  );
+  background-image: linear-gradient(110deg,#180d8d,#3532b4);
   color: white;
   display: flex;
   align-items: center;
@@ -342,8 +351,9 @@ a {
   }
 }
 .content .illness-list {
+  background-color: #eee; 
   width: 100%;
-  height: 350px;
+  height: 55%;
   padding: 0 10px;
   overflow-y: auto;
   overflow-x: auto;
@@ -351,7 +361,8 @@ a {
 }
 .content .illness-list table {
   width: 100%;
-  background-color: #eee;
+  max-height: 100%;
+  /* background-color: #eee; */
   border-spacing: 0;
   border-radius: 10px;
   padding: 15px;
@@ -370,13 +381,15 @@ a {
 .content .illness-list table thead tr #search {
   text-align: center;
 }
-.content .illness-list table thead tr td input {
+.content .illness-list table thead tr td input[type="search"] {
   width: 350px;
+  height: 35px;
   border: none;
+  margin-left: 10px;
   padding-right: 30px;
   border-radius: 10px;
 }
-.content .illness-list table thead tr td input:focus {
+.content .illness-list table thead tr td input[type="search"]:focus {
   outline: none;
 }
 .content .illness-list table thead tr td:nth-child(2) {
@@ -404,17 +417,15 @@ a {
 /* start doctor content */
 .content .doctors-list {
   width: 100%;
-  /* height: 600px; */
-  min-height: 520px;
-  max-height: 600px;
+  height: 87%;
   padding: 0 15px;
   overflow-y: auto;
   overflow-x: auto;
+  background-color: #eee;
 }
 .content .doctors-list table {
-  background-color: #eee;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   padding: 15px;
   border-spacing: 0;
   border-radius: 10px;
@@ -422,7 +433,11 @@ a {
 .content .doctors-list table td {
   padding: 10px;
 }
-.content .doctors-list table thead td input {
+.content .doctors-list table thead td form {
+  display: flex;
+  gap: 10px;
+}
+.content .doctors-list table thead td input[type="search"] {
   width: 350px;
   height: 40px;
   padding-right: 30px;
@@ -433,7 +448,7 @@ a {
   font-size: 25px;
   font-weight: bold;
 }
-.content .doctors-list table thead td input:focus {
+.content .doctors-list table thead td input[type="search"]:focus {
   outline: none;
 }
 .content .doctors-list table thead td img {
@@ -468,7 +483,7 @@ a {
 /* add doctor content */
 .content .add-doctor {
   width: 100%;
-  min-height: 100%;
+  height: 87%;
   background-color: #eee;
   padding: 0 15px;
   border-radius: 10px;
@@ -482,7 +497,7 @@ a {
   width: 100px;
 }
 .content .add-doctor .forms {
-  height: 458px;
+  height: 100%;
   overflow-y: auto;
   padding: 0 10px 10px 10px;
 }
@@ -521,6 +536,9 @@ a {
 }
 /*end add doctor content */
 /* articles */
+.articles {
+  height: 100%;
+}
 .articles .articles_from {
   width: 100%;
   background-color: #eee;
@@ -545,16 +563,7 @@ a {
   align-items: center;
 }
 .articles .articles_from .from div {
-  background-image: linear-gradient(
-    110deg,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #332fec,
-    #1712e2,
-    #1712e2
-  );
+  background-image: linear-gradient(110deg,#180d8d,#3532b4);
   flex-basis: 200px;
   color: white;
   text-align: center;
@@ -582,10 +591,14 @@ a {
     margin-bottom: 10px;
   }
 }
+.articles .pharmacy_articles {
+  background-color: #eee;
+  height: 55%;
+}
 .articles .pharmacy_articles table {
   width: 100%;
+  max-height: 100%;
   border-spacing: 0;
-  background-color: #eee;
 }
 .articles .pharmacy_articles table td {
   padding: 3px;
@@ -621,13 +634,14 @@ a {
 /* coments */
 .coments {
   width: 100%;
-  height: 535px;
+  height: 85%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 15px;
   padding: 15px;
   background-color: #eee;
   overflow-y: auto;
+  align-content: start;
 }
 .coments p {
   padding: 5px;
@@ -636,6 +650,7 @@ a {
   border: 1px solid blue;
   font-size: 15px;
   border-radius: 10px;
+  height: 150px;
 }
 /* end coments */
 /* recieption */
@@ -650,16 +665,7 @@ a {
   margin-right: 15px;
 }
 .income-celander .hospital-income .income {
-  background-image: linear-gradient(
-    110deg,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #332fec,
-    #1712e2,
-    #1712e2
-  );
+  background-image: linear-gradient(110deg,#180d8d,#3532b4);
   width: 400px;
   height: 220px;
   padding: 10px;
@@ -835,7 +841,7 @@ a {
 }
 .statistics-receiption {
   width: 100%;
-  height: 262px;
+  height: 70%;
   background-color: #eee;
 }
 .statistics-receiption .text {
@@ -872,9 +878,14 @@ a {
 }
 .statistics-receiption .main-statistics {
   width: 100%;
+  height: 100%;
   position: relative;
 }
 .statistics-receiption .x-axis {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  height: 70%;
   position: absolute;
   left: 35px;
   font-size: 15px;
@@ -886,16 +897,17 @@ a {
   display: flex;
   justify-content: space-evenly;
   /* gap: 45px; */
-  min-height: 100%;
+  height: 100%;
 }
 .statistics-receiption .column-statistics .columns {
   display: flex;
   /* gap: ; */
   position: relative;
+  height: 79%;
 }
 .statistics-receiption .column-statistics .columns::after {
   position: absolute;
-  bottom: -35px;
+  bottom: 75px;
   left: 50%;
   transform: translateX(-50%);
   font-weight: bold;
@@ -905,7 +917,7 @@ a {
   content: "الجمعة";
 }
 .statistics-receiption .column-statistics .columns div {
-  height: 180px;
+  height: 70%;
   width: 30px;
   position: relative;
 }
@@ -939,11 +951,11 @@ a {
 }
 .statistics-receiption .column-statistics .fri .column-one::after {
   content: "100";
-  top: 60%;
+  top: 70%;
 }
 .statistics-receiption .column-statistics .fri .column-two::after {
   content: "500";
-  top: 30%;
+  top: 40%;
 }
 /* ********************************************** */
 .statistics-receiption .column-statistics .sat::after {
@@ -957,11 +969,11 @@ a {
 }
 .statistics-receiption .column-statistics .sat .column-one::after {
   content: "250";
-  top: 40%;
+  top: 50%;
 }
 .statistics-receiption .column-statistics .sat .column-two::after {
   content: "950";
-  top: 10%;
+  top: 20%;
 }
 /* ************************************************ */
 .statistics-receiption .column-statistics .sun::after {
@@ -975,11 +987,11 @@ a {
 }
 .statistics-receiption .column-statistics .sun .column-one::after {
   content: "350";
-  top: 10%;
+  top: 20%;
 }
 .statistics-receiption .column-statistics .sun .column-two::after {
   content: "1k";
-  top: -10%;
+  top: 0%;
 }
 /* ************************************************ */
 .statistics-receiption .column-statistics .mon::after {
@@ -993,11 +1005,11 @@ a {
 }
 .statistics-receiption .column-statistics .mon .column-one::after {
   content: "320";
-  top: 20%;
+  top: 30%;
 }
 .statistics-receiption .column-statistics .mon .column-two::after {
   content: "850";
-  top: 0%;
+  top: 10%;
 }
 /* ************************************************ */
 .statistics-receiption .column-statistics .tus::after {
@@ -1011,11 +1023,11 @@ a {
 }
 .statistics-receiption .column-statistics .tus .column-one::after {
   content: "250";
-  top: 40%;
+  top: 50%;
 }
 .statistics-receiption .column-statistics .tus .column-two::after {
   content: "450";
-  top: 20%;
+  top: 30%;
 }
 /* ************************************************ */
 .statistics-receiption .column-statistics .wed::after {
@@ -1029,11 +1041,11 @@ a {
 }
 .statistics-receiption .column-statistics .wed .column-one::after {
   content: "1k";
-  top: 10%;
+  top: 20%;
 }
 .statistics-receiption .column-statistics .wed .column-two::after {
   content: "10k";
-  top: -10%;
+  top: 0%;
 }
 /* ************************************************ */
 .statistics-receiption .column-statistics .thu::after {
@@ -1047,11 +1059,11 @@ a {
 }
 .statistics-receiption .column-statistics .thu .column-one::after {
   content: "350";
-  top: 30%;
+  top: 40%;
 }
 .statistics-receiption .column-statistics .thu .column-two::after {
   content: "950";
-  top: 10%;
+  top: 20%;
 }
 /* show-hide */
 .receiption .content {
@@ -1081,16 +1093,7 @@ a {
   align-items: center;
 }
 .show-hide .calculating-income {
-  background-image: linear-gradient(
-    110deg,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #1712e2,
-    #332fec,
-    #1712e2,
-    #1712e2
-  );
+  background-image: linear-gradient(110deg,#180d8d,#3532b4);
   width: 450px;
   height: 200px;
   text-align: center;
